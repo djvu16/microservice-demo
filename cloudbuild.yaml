@@ -1,20 +1,21 @@
 options:
   logging: CLOUD_LOGGING_ONLY
 steps:
-  - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: 'gcloud'
-    args: ['components','install','app-engine-java']
   - name: maven:3.8.5-jdk-11
     entrypoint: 'mvn'
-    args: ['clean']
+    args: ['clean','install']
   #  - name: maven:3.8.5-jdk-11
   #    entrypoint: 'mvn'
   #    args: [ 'test' ]
-  - name: maven:3.8.5-jdk-11
-    entrypoint: 'mvn'
-    args: [
-      '-DskipTests',
-      'install',
-      'appengine:deploy',
-      '-Dapp.deploy.projectId=profound-force-382616',
-      '-Dapp.deploy.version=GCLOUD_CONFIG']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args: [ 'pwd']
+    timeout: '1600s'
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args: [ 'ls' ]
+    timeout: '1600s'
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args: [ '-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy' ]
+    timeout: '1600s'
