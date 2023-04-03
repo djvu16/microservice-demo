@@ -9,11 +9,11 @@ steps:
   #    args: [ 'test' ]
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
-    args: [ 'pwd']
+    args: [ '-c','pwd']
     timeout: '1600s'
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
-    args: [ 'ls' ]
+    args: [ '-c','ls' ]
     timeout: '1600s'
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
