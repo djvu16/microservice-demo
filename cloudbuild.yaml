@@ -1,6 +1,9 @@
 options:
   logging: CLOUD_LOGGING_ONLY
 steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'gcloud'
+    args: ['components','install','app-engine-java']
   - name: maven:3.8.5-jdk-11
     entrypoint: 'mvn'
     args: ['clean']
