@@ -16,6 +16,7 @@
     <properties>
         <java.version>11</java.version>
         <spring-boot.version>2.7.10</spring-boot.version>
+        <appengine-maven-plugin.version>2.4.4</appengine-maven-plugin.version>
     </properties>
     <packaging>pom</packaging>
     <modules>
@@ -39,4 +40,29 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <release>11</release>
+                </configuration>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>com.google.cloud.tools</groupId>
+                    <artifactId>appengine-maven-plugin</artifactId>
+                    <version>${appengine-maven-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
