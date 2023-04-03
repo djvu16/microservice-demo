@@ -12,4 +12,9 @@ steps:
   #    args: [ 'test' ]
   - name: maven:3.8.5-jdk-11
     entrypoint: 'mvn'
-    args: [ '-DskipTests','install','appengine:deploy','-Dapp.deploy.projectId=profound-force-382616']
+    args: [
+      '-DskipTests',
+      'install',
+      'appengine:deploy',
+      '-Dapp.deploy.projectId=profound-force-382616',
+      '-Dapp.deploy.version=GCLOUD_CONFIG']
