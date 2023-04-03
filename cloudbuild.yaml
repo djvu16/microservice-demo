@@ -1,18 +1,12 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
 steps:
-  - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        for d in */; do
-          config="${d}cloudbuild.yaml"
-          if [[ ! -f "${config}" ]]; then
-            continue
-          fi
-        
-          echo "Building $d ... "
-          (
-            gcloud builds submit $d --config=${config}
-          ) &
-        done
-        wait
+  - name: maven:3.8.5-jdk-11
+    entrypoint: 'mvn'
+    args: ['clean']
+  #  - name: maven:3.8.5-jdk-11
+  #    entrypoint: 'mvn'
+  #    args: [ 'test' ]
+  - name: maven:3.8.5-jdk-11
+    entrypoint: 'mvn'
+    args: [ '-DskipTests','install','appengine:deploy']
