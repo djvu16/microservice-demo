@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d18c13f7-fd13-4489-82fc-461411d68569" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/service1-app.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service2-app.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service3-app.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

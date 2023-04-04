@@ -17,25 +17,13 @@ steps:
     timeout: '1600s'
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
-    args: [ '-c','cd /workspace/service1/target/ && touch app.yaml && echo "runtime: java11" > app.yaml' ]
+    args: [ '-c', 'gcloud config set app/cloud_build_timeout 1600 && cd /workspace/service1/target/ && gcloud app deploy /workspace/service1-app.yaml' ]
     timeout: '1600s'
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
-    args: [ '-c','cd /workspace/service2/target/ && touch app.yaml && echo "runtime: java11" > app.yaml' ]
+    args: [ '-c', 'gcloud config set app/cloud_build_timeout 1600 && cd /workspace/service2/target/ && gcloud app deploy /workspace/service2-app.yaml' ]
     timeout: '1600s'
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
-    args: [ '-c','cd /workspace/service3/target/ && touch app.yaml && echo "runtime: java11" > app.yaml' ]
-    timeout: '1600s'
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: 'bash'
-    args: [ '-c', 'gcloud config set app/cloud_build_timeout 1600 && cd /workspace/service1/target/ && gcloud app deploy' ]
-    timeout: '1600s'
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: 'bash'
-    args: [ '-c', 'gcloud config set app/cloud_build_timeout 1600 && cd /workspace/service2/target/ && gcloud app deploy' ]
-    timeout: '1600s'
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: 'bash'
-    args: [ '-c', 'gcloud config set app/cloud_build_timeout 1600 && cd /workspace/service3/target/ && gcloud app deploy' ]
+    args: [ '-c', 'gcloud config set app/cloud_build_timeout 1600 && cd /workspace/service3/target/ && gcloud app deploy /workspace/service3-app.yaml' ]
     timeout: '1600s'
