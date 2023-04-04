@@ -1,5 +1,2 @@
 runtime: java11
 service: default
-network:
-  forwarded_ports:
-    - 8010/tcp

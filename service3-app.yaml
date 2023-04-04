@@ -1,5 +1,2 @@
 runtime: java11
 service: nemo
-network:
-  forwarded_ports:
-    - 8030/tcp

@@ -1,5 +1,2 @@
 runtime: java11
 service: whale
-network:
-  forwarded_ports:
-    - 8020/tcp
