@@ -17,15 +17,15 @@ steps:
     timeout: '1600s'
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
-    args: [ '-c','cd /workspace/service1/target/ && touch app.yaml && echo "runtime: java11"' ]
+    args: [ '-c','cd /workspace/service1/target/ && touch app.yaml && echo "runtime: java11" > app.yaml' ]
     timeout: '1600s'
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
-    args: [ '-c','cd /workspace/service2/target/ && touch app.yaml && echo "runtime: java11"' ]
+    args: [ '-c','cd /workspace/service2/target/ && touch app.yaml && echo "runtime: java11" > app.yaml' ]
     timeout: '1600s'
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
-    args: [ '-c','cd /workspace/service3/target/ && touch app.yaml && echo "runtime: java11"' ]
+    args: [ '-c','cd /workspace/service3/target/ && touch app.yaml && echo "runtime: java11" > app.yaml' ]
     timeout: '1600s'
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
