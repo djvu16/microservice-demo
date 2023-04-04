@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d18c13f7-fd13-4489-82fc-461411d68569" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service1/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service2/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service3/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service3/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -59,7 +60,7 @@
       <recent name="C:\Users\cogni\dj\demo\service2\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Service1Application">
+  <component name="RunManager" selected="Application.Service3Application">
     <configuration name="Service1Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.service1.Service1Application" />
       <module name="service1" />
@@ -101,9 +102,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Service1Application" />
         <item itemvalue="Application.Service3Application" />
         <item itemvalue="Application.Service2Application" />
+        <item itemvalue="Application.Service1Application" />
       </list>
     </recent_temporary>
   </component>
